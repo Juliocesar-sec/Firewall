@@ -19,11 +19,8 @@ Status: active
 [ 1] 22/tcp                    DENY IN     Anywhere
 [ 2] 80/tcp                    DENY IN     Anywhere
 ...
-📸 Print obrigatório
-Print completo da lista de regras
-Deve mostrar Status: active
-Deve incluir todas as portas bloqueadas
-
+📸 Print
+![Print1](https://github.com/Juliocesar-sec/Firewall/blob/1f6ca9ed759d184622efe75b99832517c1db72e1/Ufw/Rules/Screenshot/Screenshot_1.png)
 
 🔒 2. APLICAR BLOQUEIO DAS PORTAS
 
@@ -61,10 +58,7 @@ Rule added
 Rule added (v6)
 ```
 📸 Prints obrigatórios
-
-Pelo menos 2 a 3 comandos executados visíveis
-Saída mostrando Rule added
-Opcional: terminal inteiro com sequência de bloqueio
+![Print2](https://github.com/Juliocesar-sec/Firewall/blob/1f6ca9ed759d184622efe75b99832517c1db72e1/Ufw/Rules/Screenshot/Screenshot_2.png)
 
 🔁 3. RECARREGAR O FIREWALL
 🔧 Comando
@@ -80,7 +74,7 @@ Firewall reloaded
 ```
 
 📸 Print obrigatório
-Mostrar confirmação de reload
+![Print3](https://github.com/Juliocesar-sec/Firewall/blob/c973eed2d8b5d5a8a8f469e01272445b701617d2/Ufw/Rules/Screenshot/Screenshot_3.png)
 
 🧾 4. VERIFICAR REGRAS FINALIZADAS
 🔧 Comando
@@ -105,11 +99,6 @@ To                         Action      From
 22/tcp                    DENY IN     Anywhere
 80/tcp                    DENY IN     Anywhere
 ...
-📸 Print obrigatório
-Tela completa com:
-Status active
-Default policies
-lista de portas bloqueadas
 
 🧠 5. INTERPRETAÇÃO DOS RESULTADOS
 ✅ O que significa o resultado
