@@ -1,0 +1,138 @@
+⚙️ 1. VERIFICAR STATUS DO UFW
+
+🔧 Comando
+
+sudo ufw status numbered
+
+📥 O que esse comando faz
+
+Exibe todas as regras ativas do firewall UFW com numeração.
+
+📊 O que esperar na saída
+
+Exemplo:
+
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                    DENY IN     Anywhere
+[ 2] 80/tcp                    DENY IN     Anywhere
+...
+📸 Print obrigatório
+Print completo da lista de regras
+Deve mostrar Status: active
+Deve incluir todas as portas bloqueadas
+
+
+🔒 2. APLICAR BLOQUEIO DAS PORTAS
+
+🔧 Comando (modelo geral)
+sudo ufw deny PORT/protocol
+
+🌐 Portas TCP
+
+sudo ufw deny 21/tcp
+sudo ufw deny 22/tcp
+sudo ufw deny 23/tcp
+sudo ufw deny 25/tcp
+sudo ufw deny 53/tcp
+sudo ufw deny 80/tcp
+sudo ufw deny 111/tcp
+sudo ufw deny 443/tcp
+sudo ufw deny 445/tcp
+sudo ufw deny 5900/tcp
+sudo ufw deny 3306/tcp
+sudo ufw deny 5432/tcp
+sudo ufw deny 6379/tcp
+sudo ufw deny 2049/tcp
+sudo ufw deny 27017/tcp
+
+📡 Portas UDP
+
+sudo ufw deny 1900/udp
+sudo ufw deny 5353/udp
+
+📥 O que acontece ao executar
+
+Para cada comando, o terminal deve retornar algo como:
+
+Rule added
+Rule added (v6)
+
+📸 Prints obrigatórios
+
+Pelo menos 2 a 3 comandos executados visíveis
+Saída mostrando Rule added
+Opcional: terminal inteiro com sequência de bloqueio
+
+🔁 3. RECARREGAR O FIREWALL
+🔧 Comando
+
+sudo ufw reload
+
+📥 O que faz
+Recarrega todas as regras aplicadas sem reiniciar o sistema.
+
+📊 Saída esperada
+
+Firewall reloaded
+
+📸 Print obrigatório
+Mostrar confirmação de reload
+
+🧾 4. VERIFICAR REGRAS FINALIZADAS
+🔧 Comando
+
+sudo ufw status verbose
+
+📥 O que faz
+
+Mostra:
+
+estado do firewall
+política padrão
+regras aplicadas
+IPv6 (se ativo)
+📊 Saída esperada
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing)
+
+To                         Action      From
+--                         ------      ----
+22/tcp                    DENY IN     Anywhere
+80/tcp                    DENY IN     Anywhere
+...
+📸 Print obrigatório
+Tela completa com:
+Status active
+Default policies
+lista de portas bloqueadas
+🧠 5. INTERPRETAÇÃO DOS RESULTADOS
+✅ O que significa o resultado
+DENY IN → conexões externas bloqueadas
+Anywhere → regra aplicada globalmente
+(v6) → regra também aplicada para IPv6
+Status: active → firewall está ativo e funcionando
+🛡️ 6. CONCLUSÃO
+
+Após a aplicação das regras:
+
+Todas as portas sensíveis foram bloqueadas
+O sistema não aceita conexões externas nesses serviços
+A superfície de ataque foi significativamente reduzida
+📎 EVIDÊNCIAS (PRINTS PARA ANEXAR)
+
+Você deve incluir no report.md:
+
+🔹 ufw status numbered
+🔹 Execução dos comandos ufw deny
+🔹 ufw reload
+🔹 ufw status verbose
+🚀 EXTRA (OPCIONAL – BOA PRÁTICA)
+
+Se quiser reforçar segurança total:
+
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
