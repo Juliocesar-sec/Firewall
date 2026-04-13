@@ -19,6 +19,7 @@ Status: active
 [ 1] 22/tcp                    DENY IN     Anywhere
 [ 2] 80/tcp                    DENY IN     Anywhere
 ...
+```
 📸 Print
 ![Print1](https://github.com/Juliocesar-sec/Firewall/blob/1f6ca9ed759d184622efe75b99832517c1db72e1/Ufw/Rules/Screenshot/Screenshot_1.png)
 
@@ -57,7 +58,7 @@ Para cada comando, o terminal deve retornar algo como:
 Rule added
 Rule added (v6)
 ```
-📸 Prints obrigatórios
+📸 Print
 ![Print2](https://github.com/Juliocesar-sec/Firewall/blob/1f6ca9ed759d184622efe75b99832517c1db72e1/Ufw/Rules/Screenshot/Screenshot_2.png)
 
 🔁 3. RECARREGAR O FIREWALL
@@ -73,7 +74,7 @@ Recarrega todas as regras aplicadas sem reiniciar o sistema.
 Firewall reloaded
 ```
 
-📸 Print obrigatório
+📸 Print
 ![Print3](https://github.com/Juliocesar-sec/Firewall/blob/c973eed2d8b5d5a8a8f469e01272445b701617d2/Ufw/Rules/Screenshot/Screenshot_3.png)
 
 🧾 4. VERIFICAR REGRAS FINALIZADAS
@@ -89,6 +90,7 @@ estado do firewall
 política padrão
 regras aplicadas
 IPv6 (se ativo)
+```bash
 📊 Saída esperada
 Status: active
 Logging: on (low)
@@ -99,7 +101,7 @@ To                         Action      From
 22/tcp                    DENY IN     Anywhere
 80/tcp                    DENY IN     Anywhere
 ...
-
+```
 🧠 5. INTERPRETAÇÃO DOS RESULTADOS
 ✅ O que significa o resultado
 
@@ -115,14 +117,7 @@ Após a aplicação das regras:
 Todas as portas sensíveis foram bloqueadas
 O sistema não aceita conexões externas nesses serviços
 A superfície de ataque foi significativamente reduzida
-📎 EVIDÊNCIAS (PRINTS PARA ANEXAR)
 
-Você deve incluir no report.md:
-
-🔹 ufw status numbered
-🔹 Execução dos comandos ufw deny
-🔹 ufw reload
-🔹 ufw status verbose
 🚀 EXTRA (OPCIONAL – BOA PRÁTICA)
 
 Se quiser reforçar segurança total:
