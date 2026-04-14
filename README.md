@@ -30,6 +30,7 @@ DNS (Domain Name System) translates human-readable names into IP addresses, for 
 ```bash
 google.com → 142.250.x.x
 ```
+```
 ⚠️ Risks:
 
 >  DNS Spoofing / Cache Poisoning
@@ -42,12 +43,12 @@ Unauthorized Zone Transfer
 
 → Leakage of the entire domain structure and internal records.
 
-# 🛡️ Protection with Firewall:
+🛡️ Protection with Firewall:
 
 Allow DNS traffic only to trusted servers
 Block unnecessary external queries
 Monitor for anomalous DNS traffic
-
+```
 
 # 🖥️ REMOTE ACCESS
 
@@ -61,7 +62,7 @@ It creates an encrypted tunnel between your device (client) and the remote serve
 
 Unlike Telnet (port 23), which sends everything in plain text (very dangerous), SSH protects your session with strong encryption (like AES).
 
->Why do we use it?
+> Why do we use it?
 
 System administrators, developers, and IT professionals use SSH to:
 
@@ -135,14 +136,14 @@ Change from 22 to something like 2222 or 2244 to reduce automated bot scans.
 . Follow the principle of least privilege: Give users only the access they need.
 . Monitor SSH logs regularly for suspicious activity.
 . For high-security environments, use advanced tools like Teleport, Bastion hosts, or Zero Trust solutions instead of direct SSH.
-
+```
 ⚠️ Risks:
 
 Brute-force attacks
 Weak passwords
 Poor key management
 
-# 🛡️ Protection:
+ 🛡️ Protection:
 
 Block unrestricted external access
 Use IP whitelisting
@@ -157,9 +158,9 @@ Does not use encryption
 Credentials sent in plain text
 Session hijacking
 
-# 🛡️ Protection:
+🛡️ Protection:
 
-# ❌ Block completely in the firewall
+ ❌ Block completely in the firewall
 Replace with SSH
 
 🔸 5900/tcp – VNC
@@ -170,13 +171,12 @@ Graphical remote desktop access
 
 Weak passwords
 No encryption (in older versions)
-
-# 🛡️ Protection:
+🛡️ Protection:
 
 Use over VPN
 Restrict by IP
 Enable encryption
-
+```
 
 # 📁 FILE SHARING
 ```bash
