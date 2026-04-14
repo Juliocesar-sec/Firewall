@@ -95,7 +95,7 @@ Here’s a clear, practical guide to using SSH the right way:
 . Generate a key pair (private key on your computer, public key on the server).
 . This is much stronger than any password.
 
-2.Disable password authentication completely
+2. Disable password authentication completely
 
 In the server’s SSH config file (/etc/ssh/sshd_config), set:
 ```
@@ -108,7 +108,7 @@ PermitRootLogin no
 ```
 (Always log in as a normal user, then use sudo when needed.)
 
-4.Restrict access with a firewall
+4. Restrict access with a firewall
 
 . Do not open port 22 to the entire internet.
 . Use IP whitelisting: Allow SSH only from your home IP, office IPs, or trusted addresses.
@@ -118,7 +118,7 @@ PermitRootLogin no
 
 Change from 22 to something like 2222 or 2244 to reduce automated bot scans.
 
-6.Add extra layers of security:
+6. Add extra layers of security:
 
 . Enable Fail2Ban or similar tools to automatically block repeated failed login attempts.
 . Use two-factor authentication (2FA/MFA) with tools like Google Authenticator.
@@ -131,7 +131,7 @@ Change from 22 to something like 2222 or 2244 to reduce automated bot scans.
 . Use a strong passphrase to protect it.
 . Store it securely (not in cloud sync folders without protection).
 
-8.General rules:
+8. General rules:
 
 . Follow the principle of least privilege: Give users only the access they need.
 . Monitor SSH logs regularly for suspicious activity.
@@ -202,7 +202,9 @@ Remote Code Execution (RCE)
  🛡️ Protection:
 
 ❌ Never expose to the internet
+
 Allow only on internal networks
+
 🔸 2049/tcp – NFS
 
  ⚠️ Risks:
@@ -222,15 +224,17 @@ Configure exports properly
 🔸 5432 – PostgreSQL
 🔸 6379 – Redis
 🔸 27017 – MongoDB
+
 ⚠️ Common Risks:
 
 Databases exposed to the internet
 Weak passwords
 Lack of authentication
-```
-# 🛡️ Protection:
-```bash
+
+ 🛡️ Protection:
+
 ❌ Never make them public
+
 Allow access only from internal network or VPN
 Firewall should block everything by default
 ```
@@ -244,8 +248,8 @@ Firewall should block everything by default
 Service enumeration
 Exposure of internal information
 
-# 🛡️ Protection:
-```
+🛡️ Protection:
+
 Block external access
 Allow only trusted hosts
 
@@ -255,8 +259,8 @@ Allow only trusted hosts
 
 DDoS amplification
 Device exposure
-```
-# 🛡️ Protection:
+
+🛡️ Protection:
 
 Disable UPnP when possible
 Block at the network edge
@@ -268,11 +272,11 @@ Block at the network edge
 Local information leakage
 Spoofing
 
-# 🛡️ Protection:
+ 🛡️ Protection:
 
 Limit to local network only
 Block on public networks
-
+```
 
 # 🧠 IMPORTANT SUMMARY
 👉 In cybersecurity, the golden rule is:
