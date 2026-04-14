@@ -57,10 +57,11 @@ Monitor for anomalous DNS traffic
 
 SSH is a secure protocol that lets you remotely connect to a server or computer over the internet or a network.
 It creates an encrypted tunnel between your device (client) and the remote server. This means:
-
+```
 . Everything you type (commands, passwords during setup, file transfers) is encrypted.
-. Attackers who intercept the traffic (e.g., on public Wi-Fi or by eavesdropping) cannot read your data or steal your credentials easily.
 
+. Attackers who intercept the traffic (e.g., on public Wi-Fi or by eavesdropping) cannot read your data or steal your credentials easily.
+```
 Unlike Telnet (port 23), which sends everything in plain text (very dangerous), SSH protects your session with strong encryption (like AES).
 
 * Why do we use it?
