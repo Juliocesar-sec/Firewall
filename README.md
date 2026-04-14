@@ -1,31 +1,33 @@
-🔥 What is a Firewall?
+# 🔥 What is a Firewall?
+
 A firewall is a system (software or hardware) that controls network traffic, allowing or blocking connections based on security rules.
-👉 It works like a “bouncer” or gatekeeper for your network:
+
+# 👉 It works like a “bouncer” or gatekeeper for your network:
 
 Decides who can enter
 Decides who can leave
 Filters what is safe versus what is suspicious
 
-🎯 Importance in IT and Cybersecurity
+# 🎯 Importance in IT and Cybersecurity
 The firewall is one of the first lines of defense in any network.
 Main functions:
 
-🔐 Block unauthorized access
-🌍 Control internet traffic
-🛡️ Reduce the attack surface
-📊 Monitor suspicious activity
-🚫 Prevent exploitation of ports and services
+# 🔐 Block unauthorized access
+# 🌍 Control internet traffic
+# 🛡️ Reduce the attack surface
+# 📊 Monitor suspicious activity
+# 🚫 Prevent exploitation of ports and services
 
-👉 Without a firewall = your network is practically exposed.
+# 👉 Without a firewall = your network is practically exposed.
 
-🌐 DNS / Name Resolution (Port 53/tcp)
+# 🌐 DNS / Name Resolution (Port 53/tcp)
 What is DNS?
 DNS (Domain Name System) translates human-readable names into IP addresses, for example: 
 
 ```bash
 oogle.com → 142.250.x.x
 ```
-⚠️ Risks:
+# ⚠️ Risks:
 
 DNS Spoofing / Cache Poisoning
 → Attackers manipulate DNS responses to redirect victims to malicious sites.
@@ -34,96 +36,101 @@ DDoS Amplification
 Unauthorized Zone Transfer
 → Leakage of the entire domain structure and internal records.
 
-🛡️ Protection with Firewall:
+# 🛡️ Protection with Firewall:
 
 Allow DNS traffic only to trusted servers
 Block unnecessary external queries
 Monitor for anomalous DNS traffic
 
 
-🖥️ REMOTE ACCESS
+# 🖥️ REMOTE ACCESS
 🔸 22/tcp – SSH (Secure)
 
 Encrypted remote access
 
-⚠️ Risks:
+# ⚠️ Risks:
 
 Brute-force attacks
 Weak passwords
 Poor key management
 
-🛡️ Protection:
+# 🛡️ Protection:
 
 Block unrestricted external access
 Use IP whitelisting
 Prefer key-based authentication (instead of passwords)
 
-🔸 23/tcp – Telnet (Insecure 🚨)
+# 🔸 23/tcp – Telnet (Insecure 🚨)
 
 Does not use encryption
 
-⚠️ Risks:
+# ⚠️ Risks:
 
 Credentials sent in plain text
 Session hijacking
 
-🛡️ Protection:
+# 🛡️ Protection:
 
-❌ Block completely in the firewall
+# ❌ Block completely in the firewall
 Replace with SSH
 
 🔸 5900/tcp – VNC
 
 Graphical remote desktop access
 
-⚠️ Risks:
+# ⚠️ Risks:
 
 Weak passwords
 No encryption (in older versions)
 
-🛡️ Protection:
+# 🛡️ Protection:
 
 Use over VPN
 Restrict by IP
 Enable encryption
 
 
-📁 FILE SHARING
+# 📁 FILE SHARING
+```bash
 🔸 21/tcp – FTP
-⚠️ Risks:
+```
+# ⚠️ Risks:
 
 Clear-text login
 Malware uploads
 
-🛡️ Protection:
+# 🛡️ Protection:
 
+```bash
 Avoid → use SFTP instead
 Block public access
 
 🔸 445/tcp – SMB (Highly Critical 🚨)
-⚠️ Risks:
+```
+# ⚠️ Risks:
 
 Ransomware (e.g., WannaCry)
 Remote Code Execution (RCE)
 
-🛡️ Protection:
-
+# 🛡️ Protection:
+```bash
 ❌ Never expose to the internet
 Allow only on internal networks
-
 🔸 2049/tcp – NFS
-⚠️ Risks:
-
+```
+# ⚠️ Risks:
+```bash
 Unauthorized directory access
 Privilege escalation
-
-🛡️ Protection:
-
+```
+# 🛡️ Protection:
+```bash
 Restrict by IP
 Configure exports properly
+```
 
-
-🗄️ DATABASES
+# 🗄️ DATABASES
+```bash
 🔸 3306 – MySQL
 🔸 5432 – PostgreSQL
 🔸 6379 – Redis
@@ -133,26 +140,27 @@ Configure exports properly
 Databases exposed to the internet
 Weak passwords
 Lack of authentication
-
-🛡️ Protection:
-
+```
+# 🛡️ Protection:
+```bash
 ❌ Never make them public
 Allow access only from internal network or VPN
 Firewall should block everything by default
+```
 
-
-⚙️ SYSTEM SERVICES
+# ⚙️ SYSTEM SERVICES
+```
 🔸 111/tcp – rpcbind
-⚠️ Risks:
+```
+# ⚠️ Risks:
 
 Service enumeration
 Exposure of internal information
 
-🛡️ Protection:
-
+# 🛡️ Protection:
+```
 Block external access
 Allow only trusted hosts
-
 
 📡 UDP / NETWORK DISCOVERY
 🔸 1900/udp – SSDP / UPnP
@@ -160,34 +168,37 @@ Allow only trusted hosts
 
 DDoS amplification
 Device exposure
-
-🛡️ Protection:
+```
+# 🛡️ Protection:
 
 Disable UPnP when possible
 Block at the network edge
 
 🔸 5353/udp – mDNS
-⚠️ Risks:
+
+# ⚠️ Risks:
 
 Local information leakage
 Spoofing
 
-🛡️ Protection:
+# 🛡️ Protection:
 
 Limit to local network only
 Block on public networks
 
 
-🧠 IMPORTANT SUMMARY
+# 🧠 IMPORTANT SUMMARY
 👉 In cybersecurity, the golden rule is:
+```bash
 “If it doesn’t need to be open → it should be closed.”
+```
 The firewall helps you:
 
 Reduce exposure
 Control critical ports
 Prevent automated attacks
 
-🛡️ GENERAL BEST PRACTICES
+# 🛡️ GENERAL BEST PRACTICES
 
 🔒 Principle of least privilege
 🌐 Use VPN for remote access
