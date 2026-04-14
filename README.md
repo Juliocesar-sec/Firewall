@@ -181,38 +181,37 @@ Enable encryption
 # 📁 FILE SHARING
 ```bash
 🔸 21/tcp – FTP
-```
+
  ⚠️ Risks:
 
 Clear-text login
 Malware uploads
 
-# 🛡️ Protection:
+🛡️ Protection:
 
-```bash
 Avoid → use SFTP instead
 Block public access
 
 🔸 445/tcp – SMB (Highly Critical 🚨)
-```
+
 ⚠️ Risks:
 
 Ransomware (e.g., WannaCry)
 Remote Code Execution (RCE)
 
-# 🛡️ Protection:
-```bash
+ 🛡️ Protection:
+
 ❌ Never expose to the internet
 Allow only on internal networks
 🔸 2049/tcp – NFS
-```
+
  ⚠️ Risks:
-```bash
+
 Unauthorized directory access
 Privilege escalation
-```
-# 🛡️ Protection:
-```bash
+
+ 🛡️ Protection:
+
 Restrict by IP
 Configure exports properly
 ```
