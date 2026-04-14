@@ -1,7 +1,7 @@
 # 🔥 What is a Firewall?
-```
-A firewall is a system (software or hardware) that controls network traffic, allowing or blocking connections based on security rules.
 
+* A firewall is a system (software or hardware) that controls network traffic, allowing or blocking connections based on security rules.
+```
 👉 It works like a “bouncer” or gatekeeper for your network:
 
 Decides who can enter
@@ -9,10 +9,10 @@ Decides who can leave
 Filters what is safe versus what is suspicious
 ```
 # 🎯 Importance in IT and Cybersecurity
-```
-> The firewall is one of the first lines of defense in any network.
-Main functions:
 
+* The firewall is one of the first lines of defense in any network.
+Main functions:
+```
 .🔐 Block unauthorized access;
 .🌍 Control internet traffic;
 .🛡️ Reduce the attack surface;
@@ -25,6 +25,7 @@ Main functions:
 # 🌐 DNS / Name Resolution (Port 53/tcp)
 
 * What is DNS?
+
 DNS (Domain Name System) translates human-readable names into IP addresses, for example: 
 
 ```bash
