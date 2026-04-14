@@ -79,68 +79,68 @@ We selected **Install pfSense** and confirmed with **OK**.
 ### Steps 12 to 16 – Interface Assignment and Configuration
 
 - We assigned the virtual interfaces (`em0` and `em1`) as WAN and LAN.
-![em0 and em1](https://github.com/Juliocesar-sec/Setup.English/blob/90fe09907b1896573dc9d990b36ffc45d1d6410c/Pfsense/installation/screenshots/Screenshot_12.png)
+![em0 and em1](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_12.png)
 
 - Configured WAN as DHCP client.
-![Configured WAN as DHCP client](https://github.com/Juliocesar-sec/Setup.English/blob/90fe09907b1896573dc9d990b36ffc45d1d6410c/Pfsense/installation/screenshots/Screenshot_13.png)
+![Configured WAN as DHCP client](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_13.png)
 
 - Configured LAN as Static (initially `192.168.1.1/24`, later changed).
-![Configured LAN as Static](https://github.com/Juliocesar-sec/Setup.English/blob/90fe09907b1896573dc9d990b36ffc45d1d6410c/Pfsense/installation/screenshots/Screenshot_14.png)
+![Configured LAN as Static](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_14.png)
 
 - Confirmed the final interface assignment.
-![Confirmed the final interface assignment](https://github.com/Juliocesar-sec/Setup.English/blob/90fe09907b1896573dc9d990b36ffc45d1d6410c/Pfsense/installation/screenshots/Screenshot_15.png)
+![Confirmed the final interface assignment](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_15.png)
 
 ### Step 17 – Installing CE Version
-![Installing CE Version](https://github.com/Juliocesar-sec/Setup.English/blob/90fe09907b1896573dc9d990b36ffc45d1d6410c/Pfsense/installation/screenshots/Screenshot_17.png)
+![Installing CE Version](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_17.png)
 Since there was no pfSense Plus subscription, we selected **Install CE** (Community Edition).
 
 ### Step 18 – Version Selection 
-![Version Selection](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_18.png)
+![Version Selection](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_18.png)
 We selected version **2.8.1 – Current Stable Version**.
 
 ### Step 19 – Installation Completion 
-![Installation Completion](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_19.png)
+![Installation Completion](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_19.png)
 The installation finished successfully, showing the message:  
 **“pfSense Post Installation setup … done.”**
 
 ### Step 20 – Removing the ISO
-![Removing the ISO](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_20.png)
+![Removing the ISO](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_20.png)
 We attempted to eject the virtual ISO. Due to an error, we used the **Force Unmount** option.
 
 ### Step 21 – Shutting Down the VM
-![Shutting Down the VM](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_21.png)
+![Shutting Down the VM](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_21.png)
 The VM was paused and then powered off using the **Power off the machine** option.
 
 ### Step 22 – pfSense Console After Boot 
-![pfSense Console After Boot](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_22.png)
+![pfSense Console After Boot](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_22.png)
 The VM rebooted successfully and displayed the classic pfSense 2.8.1 console menu.
 
 ### Step 23 – LAN Interface Configuration via Console
-![LAN Interface Configuration via Console](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_23.png)
+![LAN Interface Configuration via Console](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_23.png)
 We selected option **2** (Set interface(s) IP address) and configured the **LAN (em1)** interface with:  
 **`192.168.56.2/24`**
 
 ### Step 24 – Advanced LAN Configuration 
-![Advanced LAN Configuration](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_24.png)
+![Advanced LAN Configuration](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_24.png)
 - Subnet mask: `/24`  
 - Enabled **DHCP Server** on LAN  
 - DHCP range: `192.168.56.100` to `192.168.56.200`  
 - Disabled IPv6 DHCP
 
 ### Step 25 – Configuration Confirmation
-![Configuration Confirmation](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_25.png)
+![Configuration Confirmation](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_25.png)
 The console confirmed the changes:  
 **IPv4 LAN address set to 192.168.56.2/24**  
 WebConfigurator URL: `https://192.168.56.2`
 
 ### Step 26 – Accessing the WebConfigurator
-![Accessing the WebConfigurator](https://github.com/Juliocesar-sec/Setup.English/blob/main/Pfsense/installation/screenshots/Screenshot_26.png?raw=true)
+![Accessing the WebConfigurator](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_26.png)
 On the Debian host browser, we accessed `https://192.168.56.2` and logged in with default credentials:  
 - **Username**: `admin`  
 - **Password**: `pfsense`
 
 ### Step 27 – Starting the Setup Wizard
-![Starting the Setup Wizard](https://github.com/Juliocesar-sec/Setup.English/blob/4ed7ebc0005570cfce44a41dbcd7c9389fa60e60/Pfsense/installation/screenshots/Screenshot_27.png)
+![Starting the Setup Wizard](https://github.com/Juliocesar-sec/Firewall/blob/4f3c24b188d0d6eda1c92cc87af06f2fdea8d8a4/PfSense/installation/ScreenShot/Screenshot_27.png)
 pfSense automatically launched the **Setup Wizard**, displaying a welcome message and a security warning to change the default password as soon as possible.
 
 ---
