@@ -180,7 +180,10 @@ Use over VPN
 Restrict by IP
 Enable encryption
 ```
-
+* You can learn more about this lab here:
+```
+https://github.com/Juliocesar-sec/cybersecurity-learning-portfolio/tree/main/labs/ssh-lab
+```
 # 📁 FILE SHARING
 ```bash
 🔸 21/tcp – FTP
