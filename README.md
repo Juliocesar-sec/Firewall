@@ -1,5 +1,5 @@
 # 🔥 What is a Firewall?
-
+```
 A firewall is a system (software or hardware) that controls network traffic, allowing or blocking connections based on security rules.
 
 👉 It works like a “bouncer” or gatekeeper for your network:
@@ -7,7 +7,7 @@ A firewall is a system (software or hardware) that controls network traffic, all
 Decides who can enter
 Decides who can leave
 Filters what is safe versus what is suspicious
-
+```
 # 🎯 Importance in IT and Cybersecurity
 ```
 > The firewall is one of the first lines of defense in any network.
@@ -24,7 +24,7 @@ Main functions:
 
 # 🌐 DNS / Name Resolution (Port 53/tcp)
 
-> What is DNS?
+* What is DNS?
 DNS (Domain Name System) translates human-readable names into IP addresses, for example: 
 
 ```bash
@@ -33,7 +33,7 @@ google.com → 142.250.x.x
 ```
 ⚠️ Risks:
 
->  DNS Spoofing / Cache Poisoning
+* DNS Spoofing / Cache Poisoning
 
 → Attackers manipulate DNS responses to redirect victims to malicious sites.
 DDoS Amplification
@@ -52,7 +52,7 @@ Monitor for anomalous DNS traffic
 
 # 🖥️ REMOTE ACCESS
 
-> What is Encrypted Remote Access (SSH)?
+* What is Encrypted Remote Access (SSH)?
 
 SSH is a secure protocol that lets you remotely connect to a server or computer over the internet or a network.
 It creates an encrypted tunnel between your device (client) and the remote server. This means:
@@ -62,7 +62,7 @@ It creates an encrypted tunnel between your device (client) and the remote serve
 
 Unlike Telnet (port 23), which sends everything in plain text (very dangerous), SSH protects your session with strong encryption (like AES).
 
-> Why do we use it?
+* Why do we use it?
 
 System administrators, developers, and IT professionals use SSH to:
 
@@ -71,7 +71,7 @@ System administrators, developers, and IT professionals use SSH to:
 . Transfer files securely (with SCP or SFTP);
 . Troubleshoot and maintain systems from anywhere.
 
-> Why You Must Be Careful When Using SSH
+* Why You Must Be Careful When Using SSH
 
 Even though SSH is encrypted and considered secure, it is one of the most attacked services on the internet. Here's why you still need to be very careful:
 
@@ -85,7 +85,7 @@ Even though SSH is encrypted and considered secure, it is one of the most attack
 
 Bottom line: SSH is safe only if configured properly. Default settings are often not secure enough for exposure to the public internet.
 
-> How to Use SSH Correctly and Securely (Best Practices)
+* How to Use SSH Correctly and Securely (Best Practices)
 
 Here’s a clear, practical guide to using SSH the right way:
 
@@ -242,7 +242,7 @@ Firewall should block everything by default
 # ⚙️ SYSTEM SERVICES
 ```
 🔸 111/tcp – rpcbind
-```
+
  ⚠️ Risks:
 
 Service enumeration
@@ -291,8 +291,8 @@ Prevent automated attacks
 
 # 🛡️ GENERAL BEST PRACTICES
 
-.🔒 Principle of least privilege;
-.🌐 Use VPN for remote access;
-.🚫 Block all unnecessary ports;
-.🔑 Use strong authentication;
-.📊 Monitor logs continuously.
+1 .🔒 Principle of least privilege;
+2 .🌐 Use VPN for remote access;
+3 .🚫 Block all unnecessary ports;
+4 .🔑 Use strong authentication;
+5 .📊 Monitor logs continuously.
