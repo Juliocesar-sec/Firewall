@@ -10,7 +10,7 @@
 ## Installation Step-by-Step
 
 ### Step 1 – Creating the Virtual Machine
-![Creating the Virtual Machine](https://github.com/Juliocesar-sec/Setup.English/blob/b352797f5f60a7d75a656379cdeb5f815b248ba8/Pfsense/installation/screenshots/Screenshot_1.png)
+![Creating the Virtual Machine](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_1.png)
 
 We started the **“Create Virtual Machine”** wizard in Oracle VirtualBox Manager.  
 - VM Name: `PfSens&`  
@@ -19,7 +19,7 @@ We started the **“Create Virtual Machine”** wizard in Oracle VirtualBox Mana
 - Destination folder: `/home/debian/VirtualBox VMs`
 
 ### Step 2 – Operating System Configuration
-![Operating System Configuration](https://github.com/Juliocesar-sec/Setup.English/blob/b352797f5f60a7d75a656379cdeb5f815b248ba8/Pfsense/installation/screenshots/Screenshot_2.png)
+![Operating System Configuration](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_2.png)
 
 In the second step of the wizard, we manually configured the OS:  
 - **Type**: BSD  
@@ -29,11 +29,11 @@ In the second step of the wizard, we manually configured the OS:
 We clicked **Finish** to complete the virtual machine creation.
 
 ### Step 3 – Project Folder Organization
-![Project Folder Organization](https://github.com/Juliocesar-sec/Setup.English/blob/b352797f5f60a7d75a656379cdeb5f815b248ba8/Pfsense/installation/screenshots/Screenshot_3.png)
+![Project Folder Organization](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_3.png)
 We created a folder named **“PfSense”** inside `/home/debian/Pictures/` to organize the report screenshots.
 
 ### Step 4 – Hardware Configuration 
-![Hardware Configuration](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_4.png)
+![Hardware Configuration](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_4.png)
 
 In the **Hardware** step:  
 - RAM: **4096 MB** (4 GB)  
@@ -43,36 +43,36 @@ In the **Virtual Hard Disk** step:
 - We created a new virtual disk of **21.06 GB**.
 
 ### Step 5 – Configuration Summary 
-![Configuration Summary](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_5.png)
+![Configuration Summary](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_5.png)
 Final screen of the wizard showing the complete VM summary.  
 We clicked **Finish** to create the virtual machine.
 
 ### Step 6 – Creating the Host-only Network 
-![Creating the Host-only Network](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_6.png)
+![Creating the Host-only Network](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_6.png)
 We created a **Host-only** network (`vboxnet0`) with the range `192.168.56.1/24` and DHCP enabled.  
 This network will allow direct communication between the Debian host and the pfSense VM.
 
 ### Step 7 – Initial Network Configuration (NAT) 
-![Initial Network Configuration](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_7.png)
+![Initial Network Configuration](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_7.png)
 In the VM settings (still powered off):  
 - **Adapter 1** was set to **NAT** (required for the installer to download packages).
 
 ### Step 8 – Changing to Host-only Network 
-![Changing to Host-only Network ](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_8.png)
+![Changing to Host-only Network ](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_8.png)
 We changed **Adapter 1** to **Host-only Adapter** (`vboxnet0`).  
 This configuration allows access to pfSense directly via the `192.168.56.0/24` network.
 
 ### Step 9 – Starting the VM 
-![Starting the VM](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_9.png)
+![Starting the VM](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_9.png)
 We started the virtual machine. The pfSense loader appeared with the message “Welcome to Netgate pfSense Plus”.
 
 ### Step 10 – License Acceptance 
-![License Acceptance](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_10.png)
+![License Acceptance](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_10.png)
 **Copyright and Distribution Notice** screen.  
 We clicked **[Accept]** to continue.
 
 ### Step 11 – Installer Main Menu 
-![Installer Main Menu](https://github.com/Juliocesar-sec/Setup.English/blob/1d485e040c57ce3ca1fd669d191ee2c327dd9493/Pfsense/installation/screenshots/Screenshot_11.png)
+![Installer Main Menu](https://github.com/Juliocesar-sec/Firewall/blob/ff5c6de879f8ae0ab43a9c7e1bdc2c00191844fd/PfSense/installation/ScreenShot/Screenshot_11.png)
 Netgate Installer main menu:  
 We selected **Install pfSense** and confirmed with **OK**.
 
