@@ -1,9 +1,6 @@
 
-Here's a clean, natural, and well-formatted English translation:
 
----
-
-🔥 **IPTABLES – Practical Guide (README)**
+# 🔥 **IPTABLES – Practical Guide (README)**
 
 📌 **What is IPTABLES?**
 
@@ -15,7 +12,7 @@ It allows you to control:
 - Outgoing traffic (**OUTPUT**)  
 - Routed traffic (**FORWARD**)
 
-🧠 **Basic Concepts**
+# 🧠 **Basic Concepts**
 
 **🔹 Tables**  
 Tables define the type of processing:
@@ -37,7 +34,7 @@ Tables define the type of processing:
 - **REJECT** → Block and send a response  
 - **LOG** → Log the event  
 
-⚙️ **Rule Structure**
+# ⚙️ **Rule Structure**
 
 ```bash
 iptables -A [CHAIN] -p [PROTOCOL] --dport [PORT] -j [ACTION]
@@ -51,7 +48,7 @@ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 
 This allows SSH connections.
 
-🚀 **Essential Commands**
+# 🚀 **Essential Commands**
 
 **List rules:**
 
@@ -73,7 +70,7 @@ iptables -P OUTPUT ACCEPT
 iptables -P FORWARD DROP
 ```
 
-🔐 **Basic Security Rules**
+# 🔐 **Basic Security Rules**
 
 1. **Allow loopback** (very important)
 
@@ -99,7 +96,7 @@ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -j DROP
 ```
 
-🌐 **Practical Examples with Critical Ports**
+# 🌐 **Practical Examples with Critical Ports**
 
 **🔸 Block Telnet (port 23)**
 
@@ -127,7 +124,7 @@ iptables -A INPUT -p tcp --dport 445 -j DROP
 iptables -A INPUT -p tcp --dport 22 -m limit --limit 3/min -j ACCEPT
 ```
 
-🛡️ **Best Practices**
+# 🛡️ **Best Practices**
 
 - 🔒 Default policy = **DROP**  
 - 🌍 Never expose unnecessary services  
