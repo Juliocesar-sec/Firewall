@@ -1,6 +1,7 @@
 # Relatório de Regras de Firewall – Interface OPT1
 
 ## 📌 Visão Geral
+![Print1](https://github.com/Juliocesar-sec/Firewall/blob/72ed2d1c03fec8cb2e3c594484708d85fae901af/PfSense/Rules/Screenshot/Screenshot_2026-04-26_16-42-06.png)
 
 Este relatório descreve a configuração de regras de firewall aplicadas à interface **OPT1**, com foco na segurança e controle de tráfego de rede.
 
@@ -49,9 +50,3 @@ Isso melhora a postura de segurança da rede, reduz riscos de exploração e fac
 
 ---
 
-## 📊 Recomendação Final
-
-- Aplicar o princípio de menor privilégio (Least Privilege)
-- Revisar periodicamente as regras de firewall
-- Monitorar tentativas de conexão bloqueadas
-- Segmentar redes por função (usuários, convidados, IoT, administração)
